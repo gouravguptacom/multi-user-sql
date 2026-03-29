@@ -1,0 +1,8 @@
+### Send POST request
+POST http://localhost:3000/query
+Content-Type: application/json
+
+{
+  "userId": 2,
+  "query": "SELECT * FROM Customers"
+}
