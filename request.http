@@ -6,3 +6,29 @@ Content-Type: application/json
   "userId": 2,
   "query": "SELECT * FROM Customers"
 }
+
+### Send Reset Request
+POST http://localhost:3000/reset
+Content-Type: application/json
+
+{
+  "qid": "axc"
+}
+
+### Send Execute Request
+POST http://localhost:3000/execute
+Content-Type: application/json
+
+{
+  "query": "SELECT *, RANK() OVER(ORDER BY age ASC) as rnk FROM Employees ORDER BY age ASC",
+  "qid": "axc"
+}
+
+### Send Submit Request
+POST http://localhost:3000/submit
+Content-Type: application/json
+
+{
+  "query": "selecT * FROM Employees ORDER BY age LIMIT 1",
+  "qid": "axc"
+}
